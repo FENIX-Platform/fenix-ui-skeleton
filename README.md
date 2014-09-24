@@ -1,4 +1,4 @@
 Fenix UI Skeleton
 =======
 
-FENIX Commons libraries
+Basic structure for Fenix Platform UI projects
