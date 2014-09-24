@@ -11,12 +11,11 @@
   "bugs": {
     "url": "https://github.com/FENIX-Platform/fenix-ui-skeleton/issues"
   },
+  "license": "GPL3",  
   "keywords": [
     "fenix",
     "platform"
   ],
-  "license": "GPL3",
-  "main": "main.js",  
   "dependencies": {
       "jquery": "~2.1.0",
       "backbone" : "~1.1.2",
@@ -42,10 +41,21 @@
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-exec": "~0.4.2"    
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },  
-  "config": {},  
+  },
+  "main": "main.js",  
+  "config": {
+    "sections": [
+      "home",
+      "view",
+      "analysis",
+      "data management",
+      "about"
+    ],
+    "langs": ["en","fr","es"]
+  }
 }

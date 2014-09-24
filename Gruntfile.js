@@ -8,6 +8,7 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-jsonlint');
 grunt.loadNpmTasks('grunt-jsdoc');
+grunt.loadNpmTasks('grunt-exec');
 
 module.exports = function(grunt) {
 
