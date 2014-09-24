@@ -50,42 +50,6 @@ module.exports = function(grunt) {
             },
             files: ['src/*']//, '!src/file-excluded.js']
         },
-        concat: {
-            options: {
-                separator: ';\n',
-                stripBanners: {
-                    block: true
-                }
-            },
-            lib: {
-
-            }
-        },
-        uglify: {
-            options: {
-                banner: '<%= meta.banner %>'
-            },
-            mix: {
-                files: {
-                    'dist/mix.min.js': ['<%= concat.mix.dest %>']
-                }
-            }
-        },
-        cssmin: {
-            combine: {
-                src: [
-                    'css/normalize/normalize.css',
-                    'src/lib/jquery-colorPicker/colorPicker.css', 'src/lib/jquery-uploadify-3.2.1/uploadify.css', 'src/lib/jquery-tokeninput/styles/token-input.css', 'css/simple-grid/simplegrid.css', 'css/*.css', 'css/sprite.css'
-                    ],
-                dest: 'dist/mix.min.css'
-            },
-            minify: {
-                expand: true,
-                cwd: 'dist/',
-                src: '<%= cssmin.combine.dest %>'
-                //,dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.css'
-            }
-        },
         jsonlint: {
             sample: {
                 src: ['i18n/*.json']
@@ -140,13 +104,48 @@ module.exports = function(grunt) {
                 nonull: true,
                 src: "node_modules/requirejs/require.js",
                 dest: "src/lib/require.js"
-
             },
             underscore: {
                 nonull: true,
                 src: "node_modules/underscore/underscore-min.js",
                 dest: "src/lib/underscore.js"
             }            
+        },
+        concat: {
+            options: {
+                separator: ';\n',
+                stripBanners: {
+                    block: true
+                }
+            },
+            lib: {
+
+            }
+        },
+        uglify: {
+            options: {
+                banner: '<%= meta.banner %>'
+            },
+            mix: {
+                files: {
+                    'dist/mix.min.js': ['<%= concat.mix.dest %>']
+                }
+            }
+        },
+        cssmin: {
+            combine: {
+                src: [
+                    'src/css/lib/bootstrap.css',
+                    /* ... */
+                    ],
+                dest: 'dist/css/main.css'
+            },
+            minify: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: '<%= cssmin.combine.dest %>'
+                //,dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.css'
+            }
         },
         jsdoc: {
             dist: {
@@ -165,11 +164,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'clean',
-        //'cssmin',
         'jsonlint',
         'copy',
         'jshint',
         'concat',
+        //'cssmin',        
         //'uglify'
     ]);
 };

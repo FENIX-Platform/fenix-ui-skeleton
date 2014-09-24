@@ -6,11 +6,9 @@ Basic structure for Fenix Platform UI projects
 
 #Requirements
 
-[NodeJS](http://nodejs.org/)
-
-[NPM](https://npmjs.org/) 
-
-[Grunt](http://gruntjs.com/)
+* [NodeJS](http://nodejs.org/)
+* [NPM](https://npmjs.org/) 
+* [Grunt](http://gruntjs.com/)
 
 #Deploy
 
