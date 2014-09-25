@@ -1,24 +1,5 @@
-Fenix UI Skeleton
-=======
 
-Basic structure for Fenix Platform UI projects
-
-
-#Requirements
-
-* [NodeJS](http://nodejs.org/)
-* [NPM](https://npmjs.org/) 
-* [Grunt](http://gruntjs.com/)
-
-
-#Deploy
-
-```bash
-npm install
-grunt
-
-
-#Project Structure
+**Root Fenix UI Project**
 
 ```
 ├── config/
@@ -47,6 +28,6 @@ grunt
 ├── index.html
 ├── main.js
 ├── node_modules
-└── package.json
+├── package.json
 
 ```
