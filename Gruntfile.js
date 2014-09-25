@@ -91,15 +91,6 @@ module.exports = function(grunt) {
                 nonull: true,
                 src: "node_modules/underscore/underscore-min.js",
                 dest: "src/lib/underscore.js"
-            },
-            i18n: {
-                nonull: true,
-                expand: true,
-                cwd: 'i18n/',
-                src: '*.json',
-                dest: 'dist/i18n/',
-                flatten: true,
-                filter: 'isFile'
             }
         },
         jsdoc: {
