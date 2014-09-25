@@ -26,7 +26,8 @@ grunt
 │   ├── css
 │   │   ├── fonts
 │   │   ├── icons
-│   │   └── images
+│   │   ├── images
+│   │   └── main.css
 │   ├── fenix_modules/
 │   ├── lib
 │   │   └── main.js
