@@ -16,7 +16,7 @@ Basic structure for Fenix Platform UI projects
 ```bash
 npm install
 grunt
-
+```
 
 #Project Structure
 
