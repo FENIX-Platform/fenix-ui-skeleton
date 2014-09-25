@@ -1,14 +1,10 @@
 'use strict';
 
 grunt.loadNpmTasks('grunt-contrib-clean');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-jsonlint');
 grunt.loadNpmTasks('grunt-jsdoc');
-grunt.loadNpmTasks('grunt-exec');
 
 module.exports = function(grunt) {
 
@@ -51,20 +47,11 @@ module.exports = function(grunt) {
             files: ['src/*']//, '!src/file-excluded.js']
         },
         jsonlint: {
-            sample: {
+            i18n: {
                 src: ['i18n/*.json']
             }
         },
         copy: {
-            i18n: {
-                nonull: true,
-                expand: true,
-                cwd: 'i18n/',
-                src: '*.json',
-                dest: 'dist/i18n/',
-                flatten: true,
-                filter: 'isFile',
-            },
             jquery: {
                 nonull: true,
                 src: 'node_modules/jquery/dist/jquery.min.js',
@@ -88,7 +75,7 @@ module.exports = function(grunt) {
             bootstrap_css: {
                 nonull: true,
                 src: "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                dest: "src/css/lib/bootstrap.css"
+                dest: "src/lib/bootstrap.css"
             },
             nprogress_js: {
                 nonull: true,
@@ -98,7 +85,7 @@ module.exports = function(grunt) {
             nprogress_css: {
                 nonull: true,
                 src: "node_modules/nprogress/nprogress.css",
-                dest: "src/css/lib/nprogress.css"
+                dest: "src/lib/nprogress.css"
             },
             requirejs: {
                 nonull: true,
@@ -109,42 +96,15 @@ module.exports = function(grunt) {
                 nonull: true,
                 src: "node_modules/underscore/underscore-min.js",
                 dest: "src/lib/underscore.js"
-            }            
-        },
-        concat: {
-            options: {
-                separator: ';\n',
-                stripBanners: {
-                    block: true
-                }
             },
-            lib: {
-
-            }
-        },
-        uglify: {
-            options: {
-                banner: '<%= meta.banner %>'
-            },
-            mix: {
-                files: {
-                    'dist/mix.min.js': ['<%= concat.mix.dest %>']
-                }
-            }
-        },
-        cssmin: {
-            combine: {
-                src: [
-                    'src/css/lib/bootstrap.css',
-                    /* ... */
-                    ],
-                dest: 'dist/css/main.css'
-            },
-            minify: {
+            i18n: {
+                nonull: true,
                 expand: true,
-                cwd: 'dist/css/',
-                src: '<%= cssmin.combine.dest %>'
-                //,dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.css'
+                cwd: 'i18n/',
+                src: '*.json',
+                dest: 'dist/i18n/',
+                flatten: true,
+                filter: 'isFile'
             }
         },
         jsdoc: {
@@ -157,6 +117,8 @@ module.exports = function(grunt) {
         }
     });
 
+//TODO task for removing README.md from any subdirs
+
     grunt.registerTask('docs', [
         'clean:docs',
         'jsdoc'
@@ -165,10 +127,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean',
         'jsonlint',
-        'copy',
         'jshint',
-        'concat',
-        //'cssmin',        
-        //'uglify'
+        'copy'
     ]);
 };
