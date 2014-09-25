@@ -13,17 +13,12 @@ module.exports = function(grunt) {
         meta: {
             banner:
             '/* \n'+
-            ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> \n'+
+            ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n'+
             ' * \n'+
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %> \n'+
-            ' * \n'+
-            ' * Licensed under the <%= pkg.license %> license. \n'+
-            ' * \n'+
-            ' * Homepage: \n'+
-            ' * <%= pkg.homepage %> \n'+
-            ' * \n'+
-            ' * Source: \n'+
-            ' * <%= pkg.repository.url %> \n'+
+            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n'+
+            ' * License: <%= pkg.license %>\n'+
+            ' * Homepage: <%= pkg.homepage %>\n'+
+            ' * Source: <%= pkg.repository.url %>\n'+
             ' * \n'+
             ' */\n'
         },
