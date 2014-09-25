@@ -1,12 +1,12 @@
 'use strict';
 
-grunt.loadNpmTasks('grunt-contrib-clean');
-grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-contrib-copy');
-grunt.loadNpmTasks('grunt-jsonlint');
-grunt.loadNpmTasks('grunt-jsdoc');
-
 module.exports = function(grunt) {
+
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-jsonlint');
+	grunt.loadNpmTasks('grunt-jsdoc');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
