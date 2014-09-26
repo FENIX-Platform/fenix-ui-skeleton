@@ -2,29 +2,23 @@
 
 module.exports = function(grunt) {
 
-
-grunt.loadNpmTasks('grunt-contrib-clean');
-grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-contrib-copy');
-grunt.loadNpmTasks('grunt-jsonlint');
-grunt.loadNpmTasks('grunt-jsdoc');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-jsonlint');
+	grunt.loadNpmTasks('grunt-jsdoc');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         meta: {
             banner:
             '/* \n'+
-            ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> \n'+
+            ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n'+
             ' * \n'+
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %> \n'+
-            ' * \n'+
-            ' * Licensed under the <%= pkg.license %> license. \n'+
-            ' * \n'+
-            ' * Homepage: \n'+
-            ' * <%= pkg.homepage %> \n'+
-            ' * \n'+
-            ' * Source: \n'+
-            ' * <%= pkg.repository.url %> \n'+
+            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n'+
+            ' * License: <%= pkg.license %>\n'+
+            ' * Homepage: <%= pkg.homepage %>\n'+
+            ' * Source: <%= pkg.repository.url %>\n'+
             ' * \n'+
             ' */\n'
         },
@@ -97,15 +91,6 @@ grunt.loadNpmTasks('grunt-jsdoc');
                 nonull: true,
                 src: "node_modules/underscore/underscore-min.js",
                 dest: "src/lib/underscore.js"
-            },
-            i18n: {
-                nonull: true,
-                expand: true,
-                cwd: 'i18n/',
-                src: '*.json',
-                dest: 'dist/i18n/',
-                flatten: true,
-                filter: 'isFile'
             }
         },
         jsdoc: {
