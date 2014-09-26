@@ -1,12 +1,13 @@
 'use strict';
 
+module.exports = function(grunt) {
+
+
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-jsonlint');
 grunt.loadNpmTasks('grunt-jsdoc');
-
-module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
             },
             docs: {
                 src: ['docs/*']
-            }     
+            }
         },
         jshint: {
             options: {
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
                 "-W099": true, //ignora tabs e space warning
                 "-W033": true
             },
-            files: ['src/*']//, '!src/file-excluded.js']
+            files: ['src/*.js']//, '!src/file-excluded.js']
         },
         jsonlint: {
             i18n: {
