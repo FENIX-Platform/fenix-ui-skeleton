@@ -20,7 +20,7 @@ Basic structure for Fenix Platform UI projects
 │   │   └── main.css
 │   │  
 │   ├── fenix_modules/  Fenix modules, source version of fenix modules
-│   └── lib/
+│   └── lib/            Common libs, jquery, requirejs, bootstrap
 │  
 ├── dist                Compressed version of /src directory
 │   ├── css
@@ -30,7 +30,7 @@ Basic structure for Fenix Platform UI projects
 │   │   └── main.css
 │   │  
 │   ├── fenix_modules/  Fenix modules, compressed version of fenix modules
-│   └── lib             Common libs, jquery,requirejs,bootstrap, main.js
+│   └── lib             Common libs, jquery, requirejs, bootstrap
 │       └── main.js     Concatenated lib files
 │  
 ├── index.html          Landing page of Project
