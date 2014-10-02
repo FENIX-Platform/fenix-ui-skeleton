@@ -1,53 +1,59 @@
 Fenix UI Skeleton
 =======
-
 Basic structure for Fenix Platform UI projects
 
+#Base Projects Structure
+
+```
+├── config/             Custom configurations, json file for each modules/lib
+├── i18n/               Internationalization, json file for each language
+├── node_modules/       Files from repositories, filled by npm install
+├── tests/              Unit testing scripts
+├── scripts/            Bash scripts, db deploy or additional customized tasks
+├── docs/               Project documentation, markdown format files
+│   └── README.md
+│  
+├── src                 Sources directory, contains all source code and css
+│   ├── css
+│   │   ├── fonts/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── main.css
+│   │  
+│   ├── fenix_modules/  Fenix modules, source version of fenix modules
+│   └── lib/
+│  
+├── dist                Distribution directory, compressed static resources
+│   ├── css
+│   │   ├── fonts/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── main.css
+│   │  
+│   ├── fenix_modules/  Fenix modules, compressed version of fenix modules
+│   └── lib             Common libs, jquery,requirejs,bootstrap, main.js
+│       └── main.js     Concatenated lib files
+│  
+├── index.html          Landing page of Project
+├── main.js             Landing page js controller
+│  
+├── Gruntfile.js        Configuration of deploy tasks
+└── package.json        Description of Project's description, dependencies, config, version
+
+```
 
 #Requirements
 
 * [NodeJS](http://nodejs.org/)
-* [NPM](https://npmjs.org/) 
 * [Grunt](http://gruntjs.com/)
+* [NPM](https://npmjs.org/)
 
 
 #Deploy
 
 ```bash
-npm install
-grunt
-```
+npm install             Download soruce from remote repositories
+grunt                   Deploy
 
-#Project Structure
-
-```
-├── config/
-├── dist
-│   ├── css
-│   │   ├── fonts
-│   │   ├── icons
-│   │   ├── images
-│   │   └── main.css
-│   ├── fenix_modules/
-│   ├── lib
-│   │   └── main.js
-├── docs/
-├── src
-│   ├── css
-│   │   ├── fonts
-│   │   ├── icons
-│   │   ├── images
-│   │   └── main.css
-│   ├── fenix_modules/
-│   └── lib/
-├── scripts/
-├── tests/
-│
-├── Gruntfile.js
-├── i18n
-├── index.html
-├── main.js
-├── node_modules
-└── package.json
-
+grunt docs              Generate documentation by jsdocs
 ```
