@@ -10,8 +10,7 @@ Basic structure for Fenix Platform UI projects
 ├── node_modules/       Files from repositories, filled by npm install
 ├── tests/              Unit testing scripts
 ├── scripts/            Bash scripts, db deploy or additional customized tasks
-├── docs/               Project documentation, markdown format files
-│   └── README.md
+├── docs/               Project documentation, Markdown files
 │  
 ├── src                 Sources directory, contains all source code and css
 │   ├── css
@@ -23,7 +22,7 @@ Basic structure for Fenix Platform UI projects
 │   ├── fenix_modules/  Fenix modules, source version of fenix modules
 │   └── lib/
 │  
-├── dist                Distribution directory, compressed static resources
+├── dist                Compressed version of /src directory
 │   ├── css
 │   │   ├── fonts/
 │   │   ├── icons/
@@ -38,7 +37,7 @@ Basic structure for Fenix Platform UI projects
 ├── main.js             Landing page js controller
 │  
 ├── Gruntfile.js        Configuration of deploy tasks
-└── package.json        Description of Project's description, dependencies, config, version
+└── package.json        Description of Project, deps, common configuration
 
 ```
 
