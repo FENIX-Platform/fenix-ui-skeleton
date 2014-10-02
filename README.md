@@ -2,7 +2,7 @@ Fenix UI Skeleton
 =======
 Basic structure for Fenix Platform UI projects
 
-#Base Projects Structure
+#Base Project Structure
 
 ```
 ├── config/             Custom configurations, json file for each modules/lib
