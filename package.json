@@ -22,9 +22,10 @@
       "backbone.layoutmanager" : "~0.9.5",
       "bootstrap" :  "~3.2.0",
       "requirejs" : "~2.1.14",
+      "domready": "https://github.com/requirejs/domReady/tarball/master",
       "underscore" : "~1.7.0",
       "nprogress" : "~0.1.6 ",
-	  "fenix-ui-topmenu": "https://github.com/FENIX-Platform/fenix-ui-topmenu/tarball/master"
+      "fenix-ui-topmenu": "https://github.com/FENIX-Platform/fenix-ui-topmenu/tarball/master"
   },
   "cdnDependencies" : {
       "jqwidgets": {
