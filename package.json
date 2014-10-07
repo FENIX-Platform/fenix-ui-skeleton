@@ -24,17 +24,9 @@
       "requirejs" : "~2.1.14",
       "domready": "https://github.com/requirejs/domReady/tarball/master",
       "underscore" : "~1.7.0",
-      "nprogress" : "~0.1.6 ",
+      "nprogress" : "~0.1.6",
+      "jqwidgets": "http://fenixapps.fao.org/repository/js/jqwidgets/3.1.tgz",
       "fenix-ui-topmenu": "https://github.com/FENIX-Platform/fenix-ui-topmenu/tarball/master"
-  },
-  "cdnDependencies" : {
-      "jqwidgets": {
-        "js": "<URL>",
-        "css": "<URL>",
-        "fonts": "<URL>",
-        "icons": "<URL>",
-        "images": "<URL>"
-      }
   },
   "devDependencies": {
     "grunt": "~0.4.2",
