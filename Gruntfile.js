@@ -105,16 +105,16 @@ module.exports = function(grunt) {
                 src: "node_modules/underscore/underscore-min.js",
                 dest: "src/lib/underscore.js"
             },
-      		jqwidgets_js: {
-                nonull: true,
-                src: "node_modules/fenix-ui-jqwidgets/jqx-all.js",
-                dest: "src/lib/jqwidgets.js"
-            },
-      		jqwidgets_css: {
-                nonull: true,
-                src: "node_modules/fenix-ui-jqwidgets/styles/jqx.base.css",
-                dest: "src/lib/jqwidegts.css"
-            }
+			jqwidgets_js: {
+				nonull: true,
+				src: "node_modules/jqwidgets/jqx-all.js",
+				dest: "src/lib/jqwidgets.js"
+			},
+			jqwidgets_css: {
+				nonull: true,
+				src: "node_modules/jqwidgets/styles/jqx.base.css",
+				dest: "src/lib/jqwidegts.css"
+			}
         },
         jsdoc: {
             dist: {
