@@ -54,5 +54,8 @@ Basic structure for Fenix Platform UI projects
 npm install             Download soruce from remote repositories
 grunt                   Deploy
 
+grunt clean             Reset project structure
+
 grunt docs              Generate documentation by jsdocs
+
 ```
