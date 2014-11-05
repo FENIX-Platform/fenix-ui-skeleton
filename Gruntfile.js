@@ -90,21 +90,26 @@ module.exports = function(grunt) {
                 src: "node_modules/requirejs/require.js",
                 dest: "src/lib/require.js"
             },
-            domready: {
-                nonull: true,
-                src: "node_modules/domReady/domReady.js",
-                dest: "src/lib/domready.js"
-            },
-            text: {
-                nonull: true,
-                src: "node_modules/text/text.js",
-                dest: "src/lib/text.js"
-            },  
-            underscore: {
-                nonull: true,
-                src: "node_modules/underscore/underscore-min.js",
-                dest: "src/lib/underscore.js"
-            },
+			domready: {
+				nonull: true,
+				src: "node_modules/domReady/domReady.js",
+				dest: "src/lib/domready.js"
+			},
+			text: {
+				nonull: true,
+				src: "node_modules/text/text.js",
+				dest: "src/lib/text.js"
+			},
+			i18n: {
+				nonull: true,
+				src: "node_modules/i18n/i18n.js",
+				dest: "src/lib/i18n.js"
+			},			
+			underscore: {
+				nonull: true,
+				src: "node_modules/underscore/underscore-min.js",
+				dest: "src/lib/underscore.js"
+			},
 			jqwidgets_js: {
 				nonull: true,
 				src: "node_modules/jqwidgets/jqx-all.js",
