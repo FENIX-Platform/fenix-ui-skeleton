@@ -114,7 +114,12 @@ module.exports = function(grunt) {
 				nonull: true,
 				src: "node_modules/jqwidgets/styles/jqx.base.css",
 				dest: "src/lib/jqwidegts.css"
-			}
+			},
+			handlebars: {
+				nonull: true,
+				src: "node_modules/handlebars/dist/handlebars.min.js",
+				dest: "src/lib/handlebars.js"
+			}			
         },
         jsdoc: {
             dist: {

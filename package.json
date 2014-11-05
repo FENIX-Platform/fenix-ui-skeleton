@@ -1,9 +1,9 @@
 {
   "name": "fenix-ui-skeleton",
-  "version": "0.0.1",
-  "description": "Basic structure for Fenix Platform UI projects", 
+  "version": "0.0.2",
+  "description": "Basic structure for Fenix Platform UI projects",
   "homepage": "https://github.com/FENIX-Platform/fenix-ui-skeleton",
-  "author": "FENIX Development Team", 
+  "author": "FENIX Development Team",
   "repository": {
     "type": "git",
     "url": "git@github.com:FENIX-Platform/fenix-ui-skeleton.git"
@@ -11,22 +11,23 @@
   "bugs": {
     "url": "https://github.com/FENIX-Platform/fenix-ui-skeleton/issues"
   },
-  "license": "GPL3",  
+  "license": "GPL3",
   "keywords": [
     "fenix",
     "platform"
   ],
   "dependencies": {
-      "jquery": "~2.1.0",
-      "backbone" : "~1.1.2",
-      "backbone.layoutmanager" : "~0.9.5",
-      "bootstrap" :  "~3.2.0",
-      "underscore" : "~1.7.0",
-      "nprogress" : "~0.1.6",      
-      "requirejs" : "~2.1.14",
-      "domready": "https://github.com/requirejs/domReady/tarball/master",
-      "text": "https://github.com/requirejs/text/tarball/master",
-      "jqwidgets": "http://fenixapps.fao.org/repository/js/jqwidgets/3.1.tgz"
+    "jquery": "~2.1.0",
+    "backbone": "~1.1.2",
+    "backbone.layoutmanager": "~0.9.5",
+    "bootstrap": "~3.2.0",
+    "underscore": "~1.7.0",
+    "nprogress": "~0.1.6",
+    "requirejs": "~2.1.14",
+    "handlebars": "~2.0.0",
+    "domready": "https://github.com/requirejs/domReady/tarball/master",
+    "text": "https://github.com/requirejs/text/tarball/master",
+    "jqwidgets": "http://fenixapps.fao.org/repository/js/jqwidgets/3.1.tgz"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -52,6 +53,10 @@
       "data management",
       "about"
     ],
-    "langs": ["en","fr","es"]
+    "langs": [
+      "en",
+      "fr",
+      "es"
+    ]
   }
 }
