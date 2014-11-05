@@ -25,7 +25,7 @@
     "nprogress": "~0.1.6",
     "requirejs": "~2.1.14",
     "handlebars": "~2.0.0",
-    "domready": "https://github.com/requirejs/domReady/tarball/master",
+    "domReady": "https://github.com/requirejs/domReady/tarball/master",
     "text": "https://github.com/requirejs/text/tarball/master",
     "jqwidgets": "http://fenixapps.fao.org/repository/js/jqwidgets/3.1.tgz",
     "jstree": "~3.0.8"
