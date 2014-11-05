@@ -119,7 +119,15 @@ module.exports = function(grunt) {
 				nonull: true,
 				src: "node_modules/handlebars/dist/handlebars.min.js",
 				dest: "src/lib/handlebars.js"
-			}			
+			},
+			jstree: {
+				nonull: true,
+				expand: true,
+				//flatten: true,
+				cwd: "node_modules/jstree/dist/",
+				src: '**',
+				dest: "src/lib/jstree/"
+			}
         },
         jsdoc: {
             dist: {
@@ -136,6 +144,10 @@ module.exports = function(grunt) {
     grunt.registerTask('docs', [
         'clean:docs',
         'jsdoc'
+    ]);
+
+    grunt.registerTask('clen', [
+        'clean'
     ]);
 
     grunt.registerTask('default', [
